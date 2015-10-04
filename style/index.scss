@@ -10,11 +10,12 @@ html,body{margin:0;padding:0;width: 100%;height: 100%;}
 #background {
 	//background: url(http://finkontrol.com/wp-content/uploads/2014/05/les.jpg);
 	background-image: url(https://trello-backgrounds.s3.amazonaws.com/5607d7eca0dacfd088dbc7cc/1673x1020/1e6be2a6487eb03296c1778482614cc4/Bankoboev.Ru_belaya_benzopila_na_doskah.jpg);
+	background-image: url(https://lh3.googleusercontent.com/-NifB1g-AqRQ/VUmW3IaJR_I/AAAAAAAArWQ/Luw1CYaKt-0/w3840-h2400/log_stump_bark_light_49222_3840x2400.jpg);
 	background-size: cover;
 	background-position: center;
 	opacity: 1;
-	position: fixed;
-	top: 0; bottom: 0;
+	position: absolute;
+	top: 0; bottom: 30%;
 	left: 0; right: 0;
 	z-index: -1;
 }
@@ -22,13 +23,14 @@ html,body{margin:0;padding:0;width: 100%;height: 100%;}
 #header {
 	
 	min-width: 1024px; 
-	padding: 10px;
+	padding: 40px;
+	box-sizing: border-box;
 	font-family: 'Roboto Condensed', sans-serif;
 	text-shadow: 0 0 3px #1c1c1c;
-	background: rgba(0,0,0,0.3);
+	//background: rgba(0,0,0,0.3);
 
 	#menu {
-		font-size: 150%;
+		font-size: 160%;
 
 		a {
 			text-decoration: none;
@@ -55,8 +57,8 @@ html,body{margin:0;padding:0;width: 100%;height: 100%;}
 #body {
 	padding: 10px;
 	margin: 20px;
-	margin-top: 120px;
-	margin-top: 20vh;
+	margin-top: 400px;
+	margin-top: 65vh;
 	background: rgba(255,255,255,0.9);
 
 	.post {
@@ -70,7 +72,7 @@ html,body{margin:0;padding:0;width: 100%;height: 100%;}
 	}
 }
 
-#reviews {
+#reviews, #examples {
 	
 	padding: 10px;
 	margin: 20px;
