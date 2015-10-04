@@ -1,0 +1,40 @@
+doctype html
+
+html
+	head
+		title Валка
+		meta(name="viewport" content="width=device-width, initial-scale=1")
+		meta(charset="UTF-8")
+
+	body
+		div#background
+		div.grid.row.wrap.content-center
+			div#header.grid.row.items-stretch.s10-12
+				div#menu.grid.row.items-stretch.grow-3
+					a.grid.row.items-center(href="#")
+						div Главная
+					a.grid.row.items-center(href="#")
+						div Примеры
+					a.grid.row.items-center(href="#")
+						div Стоимость
+				div#phone.grow-2 
+					span 8 (800) 555-35-35
+
+			div#body.grid.column.s10-12
+				div.post
+					include:supermarked content/index.md
+
+			div#reviews.grid.row.s3-3
+				include content/comments.jade
+				- each item in comments
+					div.review.grid.row.items-center
+						img(src=item.image width="128px" height="128px")
+						div.text!= item.text
+
+			div#phone-again.grid.row.content-center.s3-3
+				span.text Наш номер:
+				span.number 8 (800) 555-35-35
+
+			div#footer.grid.row.content-center.s3-3
+				span Копирайт (c) 1991, html 1.0
+link(rel="stylesheet", type="text/css", href="style/index.css")
