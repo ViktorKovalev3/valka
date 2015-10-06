@@ -1,0 +1,31 @@
+#!/usr/bin/env bash
+
+TIMEFORMAT="Сборка завершена за %R секунд"
+time {
+
+	echo Копирование файлов
+	mkdir /tmp/valka-build
+	cp -R . /tmp/valka-build
+	cd /tmp/valka-build
+
+	echo Очистка временных файлов
+	find . -type f -name "*.html" -delete
+	find . -type f -name "*.tar.*" -delete
+
+	echo Сборка
+	scss --update .
+	jade --hierarchy .
+
+	echo Очистка временных файлов
+	find . -type f -name "*.scss" -delete
+	find . -type f -name "*.jade" -delete
+
+	echo Упаковка
+	tar -cjf /tmp/valka-$(date +"%B-%d").tar.bz2 *
+
+	echo Очистка временных файлов
+	cd - > /dev/null
+	cp /tmp/valka-$(date +"%B-%d").tar.bz2 .
+	rm -f /tmp/valka-$(date +"%B-%d").tar.bz2
+	rm -rf /tmp/valka-build 
+}
