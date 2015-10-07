@@ -3,7 +3,10 @@ doctype html
 html
 	head
 		script(src="https://code.jquery.com/jquery-1.11.3.min.js" defer="defer")
-		script(type="application/javascript", src="js/parallax.min.js" defer="defer")
+		script(type="text/javascript", src="js/parallax.min.js" defer="defer")
+		script(type="text/javascript", src="js/photoswipe.min.js" defer="defer")
+		script(type="text/javascript", src="js/photoswipe-ui-default.min.js" defer="defer")
+		script(type="text/javascript", src="js/popup.js" defer="defer")
 		link(rel="stylesheet", type="text/css", href="style/style.css")
 		meta(name="viewport" content="width=device-width, initial-scale=1")
 		meta(charset="UTF-8") 
@@ -13,9 +16,6 @@ html
 		div#wrap
 			div.parallax-window(data-parallax="scroll" data-image-src="https://lh3.googleusercontent.com/-NifB1g-AqRQ/VUmW3IaJR_I/AAAAAAAArWQ/Luw1CYaKt-0/w3840-h2400/log_stump_bark_light_49222_3840x2400.jpg")
 				div#header-wrap.page 
-					div#title
-						div.big Спил деревьев
-						div.small Пилим деревья в Крыму.
 
 					div#header.grid.row.items-stretch.s10-12
 						div#menu.grid.row.items-stretch.s2-5
@@ -27,6 +27,10 @@ html
 								div Стоимость
 						div#phone.s3-5
 							span 8 (800) 555-35-35
+							
+					div#title
+						div.big Спил деревьев
+						div.small Пилим деревья в Крыму.
 
 				div#body-wrap.page
 					div#body.grid.column.s8-12
@@ -39,7 +43,8 @@ html
 						include content/examples.jade
 						- each item in examples
 							div.review.grid.row.items-center
-								img(src=item.image width="128px" height="128px")
+								a(href=item.image)
+									img(src=item.previewImage width="128px" height="128px")
 								div.text!= item.text
 
 				div#phone-again-wrap.page
@@ -50,3 +55,4 @@ html
 				div#footer-wrap.page
 					div#footer.grid.row.content-center.s3-3
 						span Копирайт (c) 1991, html 1.0
+		include photoswipe.jade
