@@ -10,43 +10,43 @@ html
 		title Валка
 
 	body
-		div#wrap
-			div.parallax-window(data-parallax="scroll" data-image-src="https://lh3.googleusercontent.com/-NifB1g-AqRQ/VUmW3IaJR_I/AAAAAAAArWQ/Luw1CYaKt-0/w3840-h2400/log_stump_bark_light_49222_3840x2400.jpg")
-				div#header-wrap.page 
-					div#title
-						div.big Спил деревьев
-						div.small Пилим деревья в Крыму.
+		#wrap
+			.parallax-window(data-parallax="scroll" data-image-src="https://lh3.googleusercontent.com/-NifB1g-AqRQ/VUmW3IaJR_I/AAAAAAAArWQ/Luw1CYaKt-0/w3840-h2400/log_stump_bark_light_49222_3840x2400.jpg")
+				#header-wrap.page 
+					#title
+						.big Спил деревьев
+						.small Пилим деревья в Крыму.
 
-					div#header.grid.row.items-stretch.s10-12
-						div#menu.grid.row.items-stretch.s2-5
+					#header.grid.row.items-stretch.s10-12
+						#menu.grid.row.items-stretch.s2-5
 							a.grid.row.items-center(href="#")
-								div Главная
+								| Главная
 							a.grid.row.items-center(href="#")
-								div Примеры
+								| Примеры
 							a.grid.row.items-center(href="#")
-								div Стоимость
-						div#phone.s3-5
+								| Стоимость
+						#phone.s3-5
 							span 8 (800) 555-35-35
 
-				div#body-wrap.page
-					div#body.grid.column.s8-12
-						div.post.markdown-body
+				#body-wrap.page
+					#body.grid.column.s8-12
+						.post.markdown-body
 							include:supermarked content/index.md
 			
-			div.parallax-window(data-parallax="scroll" data-image-src="img/wood-texture.jpg")
-				div#review-wrap.page
-					div#reviews.grid.row.s3-3
+			.parallax-window(data-parallax="scroll" data-image-src="img/wood-texture.jpg")
+				#review-wrap.page
+					#reviews.grid.row.s3-3
 						include content/comments.jade
 						- each item in comments
-							div.review.grid.row.items-center
+							.review.grid.row.items-center
 								img(src=item.image width="128px" height="128px")
-								div.text!= item.text
+								.text!= item.text
 
-				div#phone-again-wrap.page
-					div#phone-again.grid.row.content-center.s3-3
+				#phone-again-wrap.page
+					#phone-again.grid.row.content-center.s3-3
 						span.text Звоните,
 						span.number 8 (800) 555-35-35
 
-				div#footer-wrap.page
-					div#footer.grid.row.content-center.s3-3
+				#footer-wrap.page
+					#footer.grid.row.content-center.s3-3
 						span Копирайт (c) 1991, html 1.0
