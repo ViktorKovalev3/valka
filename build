@@ -25,7 +25,6 @@ time {
 
 	echo Очистка временных файлов
 	cd - > /dev/null
-	cp /tmp/valka-$(date +"%B-%d").tar.bz2 .
-	rm -f /tmp/valka-$(date +"%B-%d").tar.bz2
+	mv /tmp/valka-$(date +"%B-%d").tar.bz2 builds
 	rm -rf /tmp/valka-build 
 }
