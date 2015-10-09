@@ -1,0 +1,40 @@
+doctype html
+
+html(⚡)
+	head
+		meta(charset="utf-8")
+		meta(name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,minimal-ui")
+		link(rel="stylesheet" type="text/css" href="../style/markdown.css")
+		link(rel="stylesheet" type="text/css" href="../style/mobile.css")
+		script(src="https://cdn.ampproject.org/v0.js" async)
+		script(src="https://cdn.ampproject.org/v0/amp-fit-text-0.1.js" async custom-element="amp-fit-text")
+		style
+			| body {opacity: 0}
+		noscript
+			style
+				| body {opacity: 1}
+		title Валка
+	body
+		header
+			header
+				h1 Спил деревьев
+				h3 пилим деревья в Крыму.
+				h3 8 (800) 555-35-35
+			nav
+				a(href="./") ГЛАВНАЯ
+				a(href="./examples.html") ПРИМЕРЫ
+			#shadow
+		main
+			article.markdown-body
+				include:supermarked ../content/index.md
+			article.comments
+				include ../content/comments.jade
+				- each item in comments
+					figure
+						amp-img(src=item.image layout="responsive" height=1 width=1)
+						figcaption!= item.text
+			article.number
+				amp-fit-text(layout="responsive" width=100 height=20)
+					| 8 (800) 555-35-35
+		footer
+			| Копирайт (c) 1991, html 1.0
