@@ -1,18 +1,75 @@
 -
-	examples = [
+	var examples = [
 		{
-			image: 'img/user.png',
 			previewImage: 'img/user.png',
-			text: '<b>БОЖЕ!</b> Я ОХЕРЕЛ ПРОСТО КАКОЙ <i>ОХЕРЕННЫЙ</i> СЕРВИС'
+			text: 'Тополь 25 метров спилили за 3 часа, не куда было скидывать ветки, повсюду крыши',
+			
+			/**
+			 * Параметры изображений:
+			 *  w - ширина
+			 *  h - высота
+			 *  src - файл
+			 *  msrc - сжатый файл (10 шакалов из 10)
+			 *  title - описание
+			 */
+			images: [
+				{
+					w: 100,
+					h: 100,
+					src: 'http://www.spilcrimea.ru/images/primeryRabot/id97_topol-25-metrov/1.jpg'
+				},
+				{
+					w: 140,
+					h: 120,
+					src: 'http://www.spilcrimea.ru/images/primeryRabot/id97_topol-25-metrov/1.jpg'
+				}
+			]
 		},
 		{
-			image: 'img/user.png',
 			previewImage: 'img/user.png',
-			text: '<b>ПИЗДЕЦ КРУТО</b> СДЕЛАЛИ БЫСТРЕЕ ЗВУКА, ИДЕАЛЬНО ВСЕ, Я АЖ <i>ДЖВА ГОДА</i> ЖДАЛ ТАКОГО  СЕРВИСА'
+			text: 'Тополь 25 метров спилили за 3 часа, не куда было скидывать ветки, повсюду крыши',
+			images: [
+				{
+					w: 100,
+					h: 100,
+					src: 'http://www.spilcrimea.ru/images/primeryRabot/id97_topol-25-metrov/1.jpg'
+				}
+			]
 		},
 		{
-			image: 'img/user.png',
 			previewImage: 'img/user.png',
-			text: '<b>ААААААААААА</b> ТИПА ОЧЕРЕДНАЯ РЕЧЬ <i>ДОВОЛЬНОГО</i> КЛИЕНТА!!'
+			text: 'Тополь 25 метров спилили за 3 часа, не куда было скидывать ветки, повсюду крыши',
+			images: [
+				{
+					w: 100,
+					h: 100,
+					src: 'http://www.spilcrimea.ru/images/primeryRabot/id97_topol-25-metrov/1.jpg'
+				}
+			]
+		},
+		{
+			previewImage: 'img/user.png',
+			text: 'Тополь 25 метров спилили за 3 часа, не куда было скидывать ветки, повсюду крыши',
+			images: [
+				{
+					w: 100,
+					h: 100,
+					src: 'http://www.spilcrimea.ru/images/primeryRabot/id97_topol-25-metrov/1.jpg'
+				}
+			]
+		},
+		{
+			previewImage: 'img/user.png',
+			text: 'Тополь 25 метров спилили за 3 часа, не куда было скидывать ветки, повсюду крыши',
+			images: [
+				{
+					w: 100,
+					h: 100,
+					src: 'http://www.spilcrimea.ru/images/primeryRabot/id97_topol-25-metrov/1.jpg'
+				}
+			]
 		}
-	]
+
+
+	];
+	examples.forEach(x => x.images = JSON.stringify(x.images));

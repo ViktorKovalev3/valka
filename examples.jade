@@ -38,14 +38,14 @@ html
 							include:supermarked content/examples.md
 			
 			.parallax-window(data-parallax="scroll" data-image-src="img/wood-texture.jpg")
-				#review-wrap.page
-					#reviews.grid.row.s3-3
+				#example-wrap.page
+					#examples.grid.row.s10-12(itemscope itemtype="http://schema.org/ImageGallery")
 						include content/examples.jade
 						- each item in examples
-							.review.grid.row.items-center
-								a(href=item.image)
-									img(src=item.previewImage width="128px" height="128px")
-								.text!= item.text
+							figure.s1-3.example.grid.row.items-center(itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject")
+								a( href=item.previewImage itemprop="contentUrl" data-gallery=item.images)
+									img(src=item.previewImage width="128px" height="128px" itemprop="thumbnail" alt="[фото]")
+								figcaption.text(itemprop="caption description")!= item.text
 
 				#phone-again-wrap.page
 					#phone-again.grid.row.content-center.s3-3
