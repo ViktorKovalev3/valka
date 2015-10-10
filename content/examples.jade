@@ -16,12 +16,12 @@
 				{
 					w: 100,
 					h: 100,
-					src: 'http://www.spilcrimea.ru/images/primeryRabot/id97_topol-25-metrov/1.jpg'
+					src: 'img/1.png'
 				},
 				{
 					w: 140,
 					h: 120,
-					src: 'http://www.spilcrimea.ru/images/primeryRabot/id97_topol-25-metrov/1.jpg'
+					src: 'img/1.png'
 				}
 			]
 		},
@@ -32,7 +32,7 @@
 				{
 					w: 100,
 					h: 100,
-					src: 'http://www.spilcrimea.ru/images/primeryRabot/id97_topol-25-metrov/1.jpg'
+					src: 'img/1.png'
 				}
 			]
 		},
@@ -43,7 +43,7 @@
 				{
 					w: 100,
 					h: 100,
-					src: 'http://www.spilcrimea.ru/images/primeryRabot/id97_topol-25-metrov/1.jpg'
+					src: 'img/1.png'
 				}
 			]
 		},
@@ -54,7 +54,7 @@
 				{
 					w: 100,
 					h: 100,
-					src: 'http://www.spilcrimea.ru/images/primeryRabot/id97_topol-25-metrov/1.jpg'
+					src: 'img/1.png'
 				}
 			]
 		},
@@ -65,11 +65,13 @@
 				{
 					w: 100,
 					h: 100,
-					src: 'http://www.spilcrimea.ru/images/primeryRabot/id97_topol-25-metrov/1.jpg'
+					src: 'img/1.png'
 				}
 			]
 		}
 
 
 	];
-	examples.forEach(x => x.images = JSON.stringify(x.images));
+	//	examples.forEach(x => x.images = JSON.stringify(x.images));
+	examples.forEach(x => x.id = ((Math.random()*1e17).toString(16) + '000000000').substr(0, 10));
+	console.log(JSON.stringify(examples));
