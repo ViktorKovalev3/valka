@@ -225,6 +225,30 @@ html,body{margin:0;padding:0;width: 100%;height: 100%;}
 
 		a {
 			color: inherit;
+			text-decoration: none;
+			padding: 0 40px;
+		}
+
+		a.lampa {
+			
+			color: gray;
+
+			&:hover {
+				color: tomato;
+			}
+		}
+
+		a.vk {
+			font-size: 150%;
+			font-family: sans-serif;
+			
+			&:hover {
+				color: #2B587A;
+			}
+
+			img {
+				padding: 0 10px;
+			}
 		}
 	}
 }
