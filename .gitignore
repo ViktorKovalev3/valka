@@ -3,6 +3,7 @@
 *.css
 *.html
 *.tar.bz2
+builds/*
 !style/photoswipe-style/*
 !style/markdown.css
 !style/photoswipe.css
