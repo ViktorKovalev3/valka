@@ -40,12 +40,15 @@ body {
 			text-align: center;
 			position: relative;
 			z-index: 1;
+			white-space: normal;
+			max-width: 100%;
 
 			a {
 				padding: 10px;
 				color: inherit;
 				text-decoration: none;
 				font-size: 140%;
+				display: inline-block;
 			}
 		}
 	}
@@ -74,6 +77,10 @@ body {
 			padding: 20px;
 			background: white;
 			text-align: center;
+		}
+
+		amp-lightbox {
+			background: white;
 		}
 	}
 	footer {
