@@ -7,4 +7,6 @@ builds/*
 !style/photoswipe-style/*
 !style/markdown.css
 !style/photoswipe.css
-!.gitignore
+*sublime*
+build_to_local
+.gitignore
