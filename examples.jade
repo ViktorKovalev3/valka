@@ -21,12 +21,8 @@ html
 						#menu.grid.row.items-stretch.s2-5
 							a.grid.row.items-center(href="./")
 								span Главная
-							a.grid.row.items-center(href="./examples.html")
-								span Примеры
-							a.grid.row.items-center(href="./#!calc")
-								span Стоимость
-						#phone.s3-5(itemprop="telephone")
-							a(href="tel:88005553535") 8 (800) 555-35-35
+						#phone.s3-5.mobile(itemprop="telephone")
+							a(href="tel:89780166572") 8 (978) 016 65 72
 
 					#title
 						.big Спил деревьев
@@ -47,17 +43,13 @@ html
 									img(src=item.previewImage width="128px" height="128px" itemprop="thumbnail" alt="[фото]")
 								figcaption.text(itemprop="caption description")!= item.text
 
-				#phone-again-wrap.page
-					#phone-again.grid.row.content-center.s3-3
-						span.text Звоните,
-						span.number 8 (800) 555-35-35
-
 				#footer-wrap.page
 					#footer.grid.row.content-around.items-center.s3-3
 						a.lampa.grid.content-center.items-center(href="https://lampa.cc/?from=valka")
-							| Веб-студия &nbsp;
-							span.underline lampa.cc
+							| Веб-студия lampa.cc
+						a.nomobile(href="tel:89780166572") Звоните 8 (978) 016 65 72
 						a.vk.grid.content-center.items-center(href="https://vk.com/spilcrimea")
 							img(src="img/vk-32.png")
 							| Мы вконтакте
+
 		include photoswipe.jade

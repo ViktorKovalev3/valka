@@ -31,10 +31,16 @@ body {
 			h1 {
 				margin-bottom: 5px;
 			}
-			h3 {
+			h2 {
 				margin-top: 5px;
+
+				a {
+					color: white;
+					text-decoration: none;
+				}
 			}
 		}
+
 		nav {
 
 			text-align: center;
@@ -91,7 +97,8 @@ body {
 		padding: 5px;
 
 		a {
-			color: inherit;
-		}
+			color: white;
+			text-decoration: none;
+		}	
 	}
 }

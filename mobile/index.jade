@@ -16,16 +16,18 @@ html(⚡)
 		noscript
 			style
 				| body {opacity: 1}
-		title Валка
+		title Валка и спил деревьев любой сложности в Крыму.
 	body
 		header
 			header
 				h1 Спил деревьев
-				h3 пилим деревья в Крыму.
-				h3 8 (800) 555-35-35
+				h2 пилим деревья в Крыму.
+				h2 
+					a.nomobile(href="tel:89780166572") 8 (978) 016 65 72
+
 			nav
 				a(href="./") ГЛАВНАЯ
-				a(href="./examples.html") ПРИМЕРЫ
+				a(href="./examples.html") ПРИМЕРЫ РАБОТ
 			#shadow
 		main
 			article.markdown-body
@@ -36,8 +38,15 @@ html(⚡)
 					figure
 						// amp-img(src=item.image layout="responsive" height=1 width=1)
 						figcaption!= item.text
-			article.number
-				amp-fit-text(layout="responsive" width=100 height=20)
-					| 8 (800) 555-35-35
+
 		footer
-			| Копирайт (c) 1991, html 1.0
+			a.nomobile(href="tel:89780166572") Звоните 8 (978) 016 65 72
+			br
+			a.vk(href="https://vk.com/spilcrimea")
+				Мы вконтакте 
+				img(src="../img/vk-32.png")
+			br
+			a.lampa(href="https://lampa.cc/?from=valka")
+				Веб-студия &nbsp;
+				span.underline lampa.cc
+			br
