@@ -1,3 +1,19 @@
-RewriteEngine On
+Options +FollowSymlinks
+RewriteEngine on
+
+RewriteBase /
+
+RewriteCond %{REQUEST_URI} ^/[^m](.*)html$ [OR]
+RewriteCond %{REQUEST_URI} ^/?$
+
+# if the browser accepts these mime-types, it's definitely mobile, or pretending to be
+RewriteCond %{HTTP_ACCEPT} "text\/vnd\.wap\.wml|application\/vnd\.wap\.xhtml\+xml" [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} "sony|symbian|nokia|samsung|mobile|windows ce|epoc|opera" [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} "mini|nitro|j2me|midp-|cldc-|netfront|mot|up\.browser|up\.link|audiovox"[NC,OR]
+RewriteCond %{HTTP_USER_AGENT} "blackberry|ericsson,|panasonic|philips|sanyo|sharp|sie-"[NC,OR]
+RewriteCond %{HTTP_USER_AGENT} "portalmmm|blazer|avantgo|danger|palm|series60|palmsource|pocketpc"[NC,OR]
+RewriteCond %{HTTP_USER_AGENT} "smartphone|rover|ipaq|au-mic,|alcatel|ericy|vodafone\/|wap1\.|wap2\.|iPhone|android"[NC,OR]
 RewriteCond %{HTTP_USER_AGENT} "android|blackberry|googlebot-mobile|iemobile|ipad|iphone|ipod|opera mobile|palmos|webos|mobile" [NC]
-RewriteRule -$ m [L,R=302]
+
+RewriteRule .? http://valka.com.ua/mobile%{REQUEST_URI} [L,R=302]
+
